@@ -2,6 +2,8 @@
 package ejercicios;
 
 import static ejercicios.SetDeTenis.evaluar;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 /**
@@ -11,8 +13,18 @@ import java.util.Scanner;
 public class Edad {
     public static String evaluar(int dia, int mes, int anno) {
         // TODO: Coloca aquí el código del ejercicio 6: Edad
-        return "";
+                LocalDate fechaNacimiento = LocalDate.of(anno, mes, dia);
+        LocalDate fechaActual = LocalDate.now();
+        
+        Period periodo = Period.between(fechaNacimiento, fechaActual);
+        
+        int años = periodo.getYears();
+        
+        return "Usted tiene " + años + " años";
     }
+
+
+    
     
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
