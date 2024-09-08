@@ -2,6 +2,7 @@
 package ejercicios;
 
 import static ejercicios.SetDeTenis.evaluar;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -9,10 +10,11 @@ import java.util.Scanner;
  * @author danielsanchez
  */
 public class Ordenamiento {
-    public static String evaluar(int numero1, int numero2, int numero3, int numero4) {
-        // TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-        return "";
-    }
+  public static String evaluar(int numero1, int numero2, int numero3, int numero4) {
+    int[] numeros = {numero1, numero2, numero3, numero4};
+    Arrays.sort(numeros);
+    return numeros[0] + " " + numeros[1] + " " + numeros[2] + " " + numeros[3];
+}
     
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
